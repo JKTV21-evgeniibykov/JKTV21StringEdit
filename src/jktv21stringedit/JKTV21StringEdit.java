@@ -20,7 +20,34 @@ public class JKTV21StringEdit {
         // TODO code application logic here
         System.out.println("Enter text: ");
         Scanner scanner = new Scanner(System.in);
-        java.lang.String str = scanner.nextLine();
+        String str = scanner.nextLine();
+        String imput;
+        String repeat = "y";
+        do {
+            System.out.println("Select: ");
+            System.out.println("0. Exit");
+            System.out.println("1. Symbols count");
+            System.out.println("2. Words count");
+            System.out.println("3. Find word");
+            System.out.println("4. Change word");
+            imput = scanner.nextLine();
+            
+            switch (imput) {
+                case "0":
+                    repeat = "n";
+                    break;
+                case "1":
+                    System.out.println("Symbols = " + str.length());
+                    break;
+                case "2":
+                    String[] words = str.split(" ");
+                    System.out.println("Words = " + words.length);
+                    break;
+                default:
+                    break;
+            }
+        
+        } while(repeat == "y");
     }
     
 }
